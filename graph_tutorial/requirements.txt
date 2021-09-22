@@ -1,0 +1,4 @@
+Django==3.2
+msal==1.10.0
+pyyaml==5.4.1
+python-dateutil==2.8.1
