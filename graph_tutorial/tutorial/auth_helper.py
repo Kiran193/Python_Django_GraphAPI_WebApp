@@ -4,7 +4,7 @@ import os
 import time
 
 # Load the oauth_settings.yml file
-stream = open('oauth_settings.yml', 'r')
+stream = open('D:\\i2e\\Demo Try\\Python Django web app\\graph_tutorial\\tutorial\\oauth_settings.yml', 'r')
 settings = yaml.load(stream, yaml.SafeLoader)
 
 def load_cache(request):

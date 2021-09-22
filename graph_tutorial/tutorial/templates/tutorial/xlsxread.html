@@ -1,0 +1,67 @@
+{% extends "tutorial/layout.html" %}
+{% block content %}
+<h1>XlsxRead</h1>
+<!-- <a href="/calendar/new" class="btn btn-light btn-sm mb-3">New event</a> -->
+<table class="table">
+  <thead>
+    <tr>
+      <!-- Technology	Actual Cost	Planned Cost	Status	Estimated Hours	Hours Spent	PMS Report				 -->
+
+      <th scope="col">Index</th>
+      <th scope="col">Project Name</th>
+      <th scope="col">Owner</th>
+      <th scope="col">Team Members</th>
+      <th scope="col">Completed</th>
+      <th scope="col">In Progress</th>
+      <th scope="col">Upcoming</th>
+      <th scope="col">Development Completion date</th>
+      <th scope="col">System Testing Completion date</th>
+      <th scope="col">UAT Completion date</th>
+      <th scope="col">Production Deployment date</th>
+      <th scope="col">Key Risk</th>
+      <th scope="col">Project completion in percentage</th>
+      <th scope="col">Project Start Date</th> 
+      <th scope="col">Project End Date</th> 
+      <th scope="col">Technology</th> 
+      <th scope="col">Actual Cost	</th> 
+      <th scope="col">Planned Cost</th> 
+      <th scope="col">Status</th> 
+      <th scope="col">Estimated Hours</th> 
+      <th scope="col">Hours Spent</th> 
+      <th scope="col">PMS Report</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    {% if events %}
+      {% for event in events %}
+        
+        <tr>
+          <td>{{ event.Index }}</td>
+          <td>{{ event.Project_Name }}</td>
+          <td>{{ event.Owner }}</td>
+          <td>{{ event.Team_Members  }}</td>
+          <td>{{ event.Completed | safe }}</td>
+          <td>{{ event.In_Progress | safe}}</td>
+          <td>{{ event.Upcoming}}</td>
+          <td>{{ event.Development_Completion_date}}</td>
+          <td>{{ event.System_Testing_Completion_date}}</td>
+          <td>{{ event.UAT_Completion_date}}</td>
+          <td>{{ event.Production_Deployment_date}}</td>
+          <td>{{ event.Key_Risk}}</td>
+          <td>{{ event.Project_completion_in_percentage  }}</td>
+          <td>{{ event.Project_Start_Date  }}</td>
+          <td>{{ event.Project_End_Date  }}</td>
+          <td>{{ event.Technology  }}</td>
+          <td>{{ event.Actual_Cost  }}</td>
+          <td>{{ event.Planned_Cost  }}</td>
+          <td>{{ event.Status  }}</td>
+          <td>{{ event.Estimated_Hours  }}</td>
+          <td>{{ event.Hours_Spent  }}</td>
+          <td>{{ event.PMS_Report  }}</td>
+        </tr>
+      {% endfor %}
+    {% endif %}
+  </tbody>
+</table>
+{% endblock %}
